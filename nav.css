@@ -1,0 +1,61 @@
+.navbar {
+    background-color:transparent;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+
+  .hamburger {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color:#ff0077;
+      flex-direction: column;
+      align-items: center;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+  
+    .menu-toggle:checked ~ .nav-links {
+      max-height: 550px;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
